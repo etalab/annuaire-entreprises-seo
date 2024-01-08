@@ -23,7 +23,7 @@ export const deleteDataFile = async (filePath: string) => {
 };
 
 export const cleanDistFolder = () => {
-  const dir = '../dist/';
+  const dir = './dist/';
 
   if (fs.existsSync(dir)) {
     console.info('📂 Cleaning existing /dist folder');

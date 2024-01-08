@@ -27,9 +27,6 @@ Le projet nécessite node > 18
 # Installation
 npm i
 
-# Copier le fichier .env
-cp .env.dev .env
-
 # Builder les fichiers SEO
 npm run build
 ```

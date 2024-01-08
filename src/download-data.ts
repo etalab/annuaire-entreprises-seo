@@ -8,10 +8,10 @@ export const downloadAndSaveData = async () => {
   console.time('⏱ Download and save base SIREN');
 
   //@ts-ignore
-  const names = await axios.get(SOURCE_URL, { timeout: 120000 });
-  const data = names.data;
+  // const names = await axios.get(SOURCE_URL, { timeout: 120000 });
+  // const data = names.data;
   const filePath = `/tmp/sitemap-${new Date().getTime()}`;
-  await fs.promises.writeFile(filePath, data, 'utf-8');
+  await fs.promises.writeFile(filePath, 'data', 'utf-8');
 
   console.timeEnd('⏱ Download and save base SIREN');
 
@@ -23,7 +23,7 @@ export const deleteDataFile = async (filePath: string) => {
 };
 
 export const cleanDistFolder = () => {
-  const dir = '../dist/';
+  const dir = './dist/';
 
   if (fs.existsSync(dir)) {
     console.info('📂 Cleaning existing /dist folder');

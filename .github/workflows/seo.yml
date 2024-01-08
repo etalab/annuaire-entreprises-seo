@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ env.node-version }}
       - name: Install dependencies
         run: npm i
-      - name: Run /src/index.ts
+      - name: Run ./src/index.ts
         run: npm run build
       - name: Compress seo-files
         run: tar czf ./files.tar.gz ./dist

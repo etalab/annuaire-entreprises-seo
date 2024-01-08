@@ -1,6 +1,6 @@
-# annuaire-entreprises-seo
+# Annuaire des Entreprises - SEO
 
-Vérifiez les informations légales publiques des entreprises, associations et services publics en France
+Ce dépôt ne contient que les fichiers consacré aux actions SEO (génération de la sitemap et mapping entre les pages). 
 
 ## Dépôts liés 🏗
 

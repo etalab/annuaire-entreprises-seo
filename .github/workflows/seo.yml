@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Run /src/index.ts
-        run: npm run script:seo
+        run: npm run build
       - name: Compress seo-files
         run: tar czf ./files.tar.gz ./dist
       - name: Archive seo-files

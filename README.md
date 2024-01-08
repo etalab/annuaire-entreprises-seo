@@ -2,6 +2,8 @@
 
 Ce dépôt ne contient que les fichiers consacré aux actions SEO (génération de la sitemap et mapping entre les pages). 
 
+[![SEO](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml/badge.svg)](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml)
+
 ## Dépôts liés 🏗
 
 Ce dépôt fait partie d'un ensemble de dépôts qui constituent l'[Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr) :

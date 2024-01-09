@@ -3,34 +3,42 @@
 name: 'SEO'
 
 on:
+  push:
+    branches: [build_sitemap_on_server]
   workflow_dispatch:
   schedule:
     - cron: '0 1 10,25 * *'
 
 jobs:
-  build:
+  deploy-production:
     name: 'Generate SEO files'
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        include:
+          - environment: production-01
+            host: SSH_HOST_PRODUCTION_01
+          - environment: production-02
+            host: SSH_HOST_PRODUCTION_02
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.node-version }}
-      - name: Install dependencies
-        run: npm i
-      - name: Run ./src/index.ts
-        run: npm run build
-      - name: Compress seo-files
-        run: tar czf ./files.tar.gz ./dist
-      - name: Archive seo-files
-        uses: actions/upload-artifact@v3
-        with:
-          name: seo-files
-          path: |
-            ./files.tar.gz
+      - uses: actions/checkout@v3
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ./deploy.key
+          sudo chmod 600 ./deploy.key
+          ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_MACHINE_USER_PRIVATE_KEY}}
+          SSH_HOST: ${{ secrets[matrix.host] }}
+
+      - name: Deploy to production
+        run: ssh -i ./deploy.key www-data@$SSH_HOST '/opt/docker/app/sitemap/deploy.sh >> /var/log/cron_build_sitemap'
+        env:
+          SSH_HOST: ${{ secrets[matrix.host] }}
 
       - name: Notify staging failure only
         if: failure()
@@ -43,7 +51,7 @@ jobs:
   notify-deploy-success:
     name: Notify successful deployment
     runs-on: ubuntu-latest
-    needs: [build]
+    needs: [deploy-production]
 
     steps:
       - uses: actions/checkout@v3

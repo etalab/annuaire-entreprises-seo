@@ -4,10 +4,10 @@ name: 'SEO'
 
 on:
   push:
-    branches: [build_sitemap_on_server]
+    branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '0 1 10,25 * *'
+    - cron: '0 1 * * *'
 
 jobs:
   deploy-production:

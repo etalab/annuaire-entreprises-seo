@@ -30,3 +30,7 @@ npm i
 # Builder les fichiers SEO
 npm run build
 ```
+# Licence
+
+Le code source de ce dépôt est publié sous [licence MIT](LICENSE) par
+la Direction interministérielle du numérique.

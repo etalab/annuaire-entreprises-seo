@@ -36,11 +36,11 @@ jobs:
           SSH_HOST: ${{ secrets[matrix.host] }}
 
       - name: Deploy to production
-        run: ssh -i ./deploy.key www-data@$SSH_HOST '/opt/docker/app/sitemap/deploy.sh >> /var/log/cron_build_sitemap'
+        run: ssh -v -i ./deploy.key www-data@$SSH_HOST '/opt/docker/app/sitemap/deploy.sh >> /var/log/cron_build_sitemap'
         env:
           SSH_HOST: ${{ secrets[matrix.host] }}
 
-      - name: Notify staging failure only
+      - name: Notify failure only
         if: failure()
         uses: ./.github/actions/notify
         with:

@@ -36,7 +36,7 @@ jobs:
           SSH_HOST: ${{ secrets[matrix.host] }}
 
       - name: Deploy to production
-        run: ssh -v -i ./deploy.key www-data@$SSH_HOST '/opt/docker/app/sitemap/deploy.sh >> /var/log/cron_build_sitemap'
+        run: ssh -i ./deploy.key www-data@$SSH_HOST '/opt/docker/app/sitemap/deploy.sh | tee --append /var/log/cron_build_sitemap'
         env:
           SSH_HOST: ${{ secrets[matrix.host] }}
 

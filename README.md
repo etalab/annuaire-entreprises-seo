@@ -1,6 +1,8 @@
-# annuaire-entreprises-seo
+# Annuaire des Entreprises - SEO
 
-Vérifiez les informations légales publiques des entreprises, associations et services publics en France
+Ce dépôt ne contient que les fichiers consacré aux actions SEO (génération de la sitemap et mapping entre les pages). 
+
+[![SEO](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml/badge.svg)](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml)
 
 ## Dépôts liés 🏗
 
@@ -25,9 +27,10 @@ Le projet nécessite node > 18
 # Installation
 npm i
 
-# Copier le fichier .env
-cp .env.dev .env
-
 # Builder les fichiers SEO
 npm run build
 ```
+# Licence
+
+Le code source de ce dépôt est publié sous [licence MIT](LICENSE) par
+la Direction interministérielle du numérique.

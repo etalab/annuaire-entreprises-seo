@@ -1,8 +1,8 @@
 export const getStaticPages = () => {
   return [
     '/',
-    '/donnees-extrait-kbis',
-    '/comment-ca-marche',
+    '/a-propos/donnees-extrait-kbis',
+    '/a-propos/comment-ca-marche',
     '/administration',
     '/faq',
     '/definitions',

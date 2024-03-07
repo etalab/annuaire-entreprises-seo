@@ -2,22 +2,20 @@
 
 Ce dépôt ne contient que les fichiers consacré aux actions SEO (génération de la sitemap et mapping entre les pages). 
 
+<a href="https://github.com/etalab/annuaire-entreprises-seo/blob/main/LICENSE"><img src="https://img.shields.io/github/license/etalab/annuaire-entreprises-seo.svg?color=green" alt="License Badge"></a>
 [![SEO](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml/badge.svg)](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml)
 
 ## Dépôts liés 🏗
 
-Ce dépôt fait partie d'un ensemble de dépôts qui constituent l'[Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr) :
+Ce dépôt fait partie [d'un ensemble de services qui constituent l'Annuaire des Entreprises](https://github.com/etalab/annuaire-entreprises-site?tab=readme-ov-file#dépôts-liés-).
 
-| Description                         | Accès                                                                       |
-| ----------------------------------- | --------------------------------------------------------------------------- |
-| Le site Web                         | [par ici 👉](https://github.com/etalab/annuaire-entreprises-site)           |
-| Les actions SEO                     | [par ici 👉](https://github.com/etalab/annuaire-entreprises-seo)            |
-| L’API du Moteur de recherche        | [par ici 👉](https://github.com/etalab/annuaire-entreprises-search-api)     |
-| Pipeline ETL                        | [par ici 👉](https://github.com/etalab/annuaire-entreprises-search-infra)   |
-| Le proxy API du site                | [par ici 👉](https://github.com/etalab/annuaire-entreprises-api-proxy)      |
-| Tests de pertinence de la recherche | [par ici 👉](https://github.com/etalab/annuaire-entreprises-search-testing) |
+## But
 
-### Installation
+Ce dépôt permet de générer : 
+- la sitemap
+- la cartographie des entreprises de france par département et code NAF
+
+## Installation
 
 Le projet nécessite node > 18
 

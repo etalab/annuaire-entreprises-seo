@@ -1,9 +1,11 @@
-# Annuaire des Entreprises - SEO
-
-Ce dépôt ne contient que les fichiers consacré aux actions SEO (génération de la sitemap et mapping entre les pages). 
+<h1 align="center">
+  <img src="https://github.com/etalab/annuaire-entreprises-site/blob/main/public/images/annnuaire-entreprises.svg" width="400px" />
+</h1>
 
 <a href="https://github.com/etalab/annuaire-entreprises-seo/blob/main/LICENSE"><img src="https://img.shields.io/github/license/etalab/annuaire-entreprises-seo.svg?color=green" alt="License Badge"></a>
 [![SEO](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml/badge.svg)](https://github.com/etalab/annuaire-entreprises-seo/actions/workflows/seo.yml)
+
+Bienvenue sur le dépôt SEO de [l’Annuaire des Entreprises](https://github.com/etalab/annuaire-entreprises-site).
 
 ## Dépôts liés 🏗
 
